@@ -62,6 +62,7 @@ def decrypt_file(infile, outfile, key, algo):
         return
 
     if algo == 'AES':
+        iv=secrets.token_bytes(16)
         cipher = Cipher(algorithms.AES(key), modes.ECB())
     elif algo == 'ChaCha20':
         cipher = Cipher(algorithms.ChaCha20(key), modes.ECB())
