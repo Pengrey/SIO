@@ -1,0 +1,17 @@
+admin
+test
+guest
+info
+adm
+mysql
+user
+administrator
+oracle
+root
+ftp
+pi
+puppet
+ansible
+ec2-user
+vagrant
+azureuser

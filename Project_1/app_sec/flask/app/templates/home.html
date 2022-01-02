@@ -1,0 +1,298 @@
+<html>
+<head>
+    <title>Look, up in the sky! It's a bird! It's a plane! It's... a UFO</title>
+    <meta name="resource-type" content="document">
+    <meta name="description" content="The Homepage Where Extraterrestrial Beings Are Taken Seriously">
+    <meta name="copyright" content="(C) 2021-2022 SIO Team 24">
+</head>
+
+<body bgcolor=0 text=#dfe7e7 link=##36cc00 vlink=#349111>
+    <a name=home></a>
+    <img align="left" src="images/animated-ufo-left.gif" alt="">
+    <img align="right" src="images/animated-ufo-right.gif" alt="">
+    <center><a href="movies/spork.fli"><img align="middle" 
+    src="images/ufo-sighting.png" border="0" alt="UFO" style="width:512;height:288;"></a>
+    <h1>Look, up in the sky! It's a bird! It's a plane! It's...a UFO</h1></center>
+    <!--<p align=right><em>Last updated: 10-Sep-1996</em>-->
+
+    <br clear=all>
+
+    <table style="width: 100%; color: #36cc00;">
+        <tr>
+            {% if user %}
+            <td style="text-align:left;">
+                <span>
+                    Welcome home, {{ user }} <img src="images/alien-emoji.png" alt="" style="width:16;height:16;">
+                </span>
+            </td>
+            <td style="text-align:right;">
+                <a href="/logout">logout</a>
+            </td>
+            {% else %}
+            <td style="text-align:left;">
+                <span>
+                    Hello, unknown terraqueous <img src="images/alien-emoji.png" alt="" style="width:16;height:16;">
+                </span>
+            </td>
+            <td style="text-align:right;">
+                <a href="/login">login</a>
+            </td>
+            {% endif %}
+        </tr>
+    </table>
+    
+    <hr>
+
+    <h2>What's this?</h2>
+
+    <p>
+        For those who still dont believe, there are dozens of reports all around the world, over 80,000 records of UFO sightings over the past century in the USA alone.
+        <br>
+        For those, like us, who are also UFO enthusiast, here are some sources of information of those beings we hope will come for our rescue.
+    </p>
+
+    <hr>
+
+    <h2>We are not alone!</h2>
+
+    <p>
+        If UFOs were visiting our world, where were these extraterrestrials? Could they be hidden among us?
+        An unidentified flying object or UFO is defined as any apparent object in the sky that can't be identified and classified as an object or phenomenon already known. But the name is generally widely used to refer to the alleged or actual observations of alien ships.
+        The phrase was coined as an acronym by Project Blue Book head Edward J. Ruppelt, but today UFO is widely used as a stand-in for extraterrestrial spacecraft-aircraft that people claim to have observed. Many UFOs are described as being flying saucers, as is shown in the accompanying image.
+    </p>
+    <center>
+        <img align="middle" src="images/ufo1.jpg.jpeg" border="0" alt="PPhotograph from purported UFO sighting in Passoria, New Jersey - USA" style="width:200;height:185;">
+    </center>
+
+    <p>
+        Studies and investigations into UFO reports have been conducted by governments, other organisations, and private individuals.
+        Unidentified lights and flying objects have been reported for much of human history. Skeptics including scientists, and organizations such as the <a href="https://www.skepticalinquirer.org/" title="">Committee for Skeptical Inquiry</a>, state that UFOs are conventional objects or phenomena, while Ufologists like us favour more likely hypotheses. UFOs are a worldwide cultural phenomenon, appearing in fictional movies, television and other media. UFO reports continue to appear every day.
+    </p>
+
+    <hr>
+
+    <h2>First UFO sighting</h2>
+
+    <h3>Flying saucers and Project Blue Book</h3>
+    <center>
+        <img align="middle" src="images/kenneth_arnold_1947.jpeg" border="0" alt="Pilot Kenneth Arnold" style="width:200;height:185;">
+    </center>
+    <a href="https://www.youtube.com/watch?v=01sVLTO8xmo">[VIDEO] 24th June 1947: The first widely-reported UFO sighting</a>
+
+    <p>
+        The first well-known UFO sighting occurred in 1947, when businessman Kenneth Arnold claimed to see a group of nine high-speed objects near Mount Rainier in Washington while flying his small plane. Arnold estimated the speed of the crescent-shaped objects as several thousand miles per hour and said they moved “like saucers skipping on water.” In the newspaper report that followed, it was mistakenly stated that the objects were saucer-shaped, hence the term flying saucer.
+    </p>
+    <p>
+        Sightings of unidentified aerial phenomena increased, and in 1948 the U.S. Air Force began an investigation of these reports called Project Sign. The initial opinion of those involved with the project was that the UFOs were most likely sophisticated Soviet aircraft, although some researchers suggested that they might be spacecraft from other worlds, the so-called extraterrestrial hypothesis (ETH). Within a year, Project Sign was succeeded by Project Grudge, which in 1952 was itself replaced by the longest-lived of the official inquiries into UFOs, Project Blue Book, headquartered at Wright-Patterson Air Force Base in Dayton, Ohio.
+    </p>
+    <p>
+        From 1952 to 1969 Project Blue Book compiled reports of more than 12,000 sightings or events, each of which was ultimately classified as “identified” with a known astronomical, atmospheric, or artificial (human-caused) phenomenon or “unidentified.” The latter category, approximately 6 percent of the total, included cases for which there was insufficient information to make an identification with a known phenomenon.
+    </p>
+
+
+    <a name=report><hr></a>
+
+    <h2>Sighting Report</h2>
+    <img align=right src="images/abduction.gif" alt="">
+
+    <p>
+        Thousands of people report suspected flying object sightings every year. Sometimes the objects are considered UFOs.
+        <br>
+        File a report if you observe any of the Identified Events: UFO Sighting, Abduction, Entity Seen.
+    </p>
+
+    <form method="POST">
+    <table>
+        <tr>
+            <td>Type of event:</td>
+            <td>
+                <input type="radio" id="typeChoice1"
+                        name="type" value="ufo">
+                <label for="typeChoice1">UFO Sighting</label>
+                <input type="radio" id="typeChoice2"
+                        name="type" value="abduction">
+                <label for="typeChoice2">Abduction</label>
+                <input type="radio" id="typeChoice3"
+                        name="type" value="entity">
+                <label for="typeChoice3">Entity Seen</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="fname">Name:</label></td>
+            <td><input type="text" id="fname" name="fname" size="30"></td>
+            <td><label for="femail">Email:</label></td>
+            <td><input type="email" id="femail" name="femail" size="50"></td>
+        </tr>
+        <tr>
+            <td><label for="fcountry">Country/City:</label></td>
+            <td><input type="text" id="fcountr" name="fcountry" size="30"></td>
+            <td><label for="flocation">Location:</label></td>
+            <td><input type="text" id="flocation" name="flocation" size="50" rows="2"></td>
+        </tr>
+        <tr>
+            <td><label for="fdate">Date:</label></td>
+            <td><input type="date" id="fdate" name="fdate"></td>
+            <td><label for="fwitnesses">Number of Witnesses:</label></td>
+            <td><input type="number" id="fwitnesses" name="fwitnesses"  size="2"></td>
+        </tr>
+        <tr>
+            <td><label for="fdescription">Description:</label></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <input type="textarea" id="fdescription" name="fdescription" size="120" rows="4">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="4" align="center">
+                <input type="submit" name="submit" value="submit">
+            </td>
+        </tr>
+    </table>
+    </form>
+
+
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <hr>
+
+    <a name="books"><h2>TOP 5: Best Books on UFO</h2></a>
+
+    <p>The UFO Phenomenon was thrust upon popular culture on June 24, 1947, when private pilot Kenneth Arnold claimed that he saw a string of nine, shiny unidentified flying objects flying past Mount Rainier in the State of Washington. Shortly thereafter the in July of 1947 the famous “Roswell Incident” occurred in white sands of New Mexico’s desert. Since those legendary events brought the UFO Phenomenon into the national conversation there have been thousands of books written on the subject matter. While many are well written and profound few are considered iconic and a “must read”. To help narrow down your choices we have put together the following list.</p>
+
+    <ol start="1">
+        <li><a href="https://www.imdb.com/title/tt13095604/?ref_=nv_sr_srsg_0">Communion: A True Story</a>
+            <ul style="list-style-type:none;">
+                <li><img src="images/book1.jpg" alt="Communion: A True Story"></li>
+            </ul>
+            <ul>
+                <li><b>Author:</b> Whitley Strieber</li>
+                <li><b>1st Published:</b> 1988</li>
+            </ul>
+        </li>
+        <br>
+        <li><a href="https://www.imdb.com/title/tt9107368/?ref_=nv_sr_srsg_0">The Day After Roswell</a>
+            <ul style="list-style-type:none;">
+                <img src="images/book2.jpg" alt="The Day After Roswell">
+            </ul>
+            <ul>
+                <li><b>Author:</b> United States Army Colonel Philip J. Corso and William J. Birnes</li>
+                <li><b>1st Published:</b> 1997</li>
+            </ul>
+        </li>
+        <br>
+        <li><a href="https://www.imdb.com/title/tt13095604/?ref_=nv_sr_srsg_0">Chariots of the Gods</a>
+            <ul style="list-style-type:none;">
+                <img src="images/book3.jpg" alt="Chariots of the Gods">
+            </ul>
+            <ul>
+                <li><b>Author:</b> Erich von Däniken</li>
+                <li><b>1st Published:</b> 1968</li>
+            </ul>
+        </li>
+        <br>
+        <li><a href="https://www.imdb.com/title/tt2179171/?ref_=nv_sr_srsg_0">I RODE A FLYING SAUCER.: The Mystery of The Flying Saucers Revealed</a>
+            <ul style="list-style-type:none;">
+                <img src="images/book4.jpg" alt="The Mystery of The Flying Saucers Revealed">
+            </ul>
+            <ul>
+                <li><b>Author:</b> George W. Van Tassel</li>
+                <li><b>1st Published:</b> 1952</li>
+            </ul>
+        </li>
+        <br>
+        <li><a href="https://www.imdb.com/title/tt0075860/?ref_=nv_sr_srsg_0">The UFO Experience: A Scientific Inquiry</a>
+            <ul style="list-style-type:none;">
+                <img src="images/book5.jpg" alt="The UFO Experience: A Scientific Inquiry">
+            </ul>
+            <ul>
+                <li><b>Author:</b> Dr. J. Allen Hynek</li>
+                <li><b>1st Published:</b> 1972</li>
+            </ul>
+        </li>
+    </ol>
+
+    <hr>
+
+    <a name="documentaries"><h2>TOP 5: Best UFO Documentaries</h2></a>
+
+    <p>Documentaries about aliens, UFOs, flying saucers, and other mysterious craft said to lurk in the night sky occupy a special category in film making. Since the appearance of the 1951 science fiction classic, <a href="https://www.imdb.com/title/tt0043456/">The Day the Earth Stood Still</a>, a growing flock of amateur investigators, scholars, and journalists, drawn to reports of unidentified flying objects, have written books and produced documentary films arguing that  alien craft and technology exist.</p>
+
+    <p>The Internet helped the formerly fringe topic explode in popularity and enter the mainstream. The nonfiction book offerings and film documentaries on aliens & UFOs have multiplied exponentially in recent years. Many of them are by part-time enthusiast researchers while a few skeptics have also added their voices to the growing number of UFO documentaries.</p>
+
+    <p>So how does one navigate the overwhelming choices of film documentaries? To help narrow down your options we have put together the “TOP 5: Best UFO Documentaries”. We highly recommend you add these titles to your video collection.</p>
+
+    <ol start="1">
+        <li><a href="https://www.imdb.com/title/tt13095604/?ref_=nv_sr_srsg_0">The Phenomenon</a>
+            <ul>
+                <li><b>Director:</b> James Fox</li>
+                <li><b>Release Date:</b> 2020</li>
+            </ul>
+        </li>
+        <li><a href="https://www.imdb.com/title/tt9107368/?ref_=nv_sr_srsg_0">Bob Lazar: Area 51 & Flying Saucers</a>
+            <img align="right" src="images/signs-movie.gif" alt="Signs (2002)">
+            <ul>
+                <li><b>Director:</b> Jeremy Kenyon Lockyer Corbell</li>
+                <li><b>Release Date:</b> 2018</li>
+            </ul>
+        </li>
+        <li><a href="https://www.imdb.com/title/tt13095604/?ref_=nv_sr_srsg_0">Unacknowledged: An Exposé of the World’s Greatest Secret</a>
+            <ul>
+                <li><b>Director:</b> Michael Mazzola</li>
+                <li><b>Release Date:</b> 2017</li>
+            </ul>
+        </li>
+        <li><a href="https://www.imdb.com/title/tt2179171/?ref_=nv_sr_srsg_0">Calling All Earthlings</a>
+            <ul>
+                <li><b>Director:</b> Jonathan Berman</li>
+                <li><b>Release Date:</b> 2018</li>
+            </ul>
+        </li>
+        <li><a href="https://www.imdb.com/title/tt0075860/?ref_=nv_sr_srsg_0">Close Encounters of the Fifth Kind: Contact Has Begun</a>
+            <ul>
+                <li><b>Director:</b> Steven Spielberg</li>
+                <li><b>Release Date:</b> 1977</li>
+            </ul>
+        </li>
+    </ol>
+
+    <a name=links><hr></a>
+
+    <h2>Other sources of knowledge</h2>
+
+    <menu>
+
+    <li><dt><a href="http://ufology-news.com/">ufology.news</a></li>
+    <dd>Ufology News</dd>
+
+    <li><dt><a href="http://www.cufos.org">c.u.f.o.s.</a></li>
+    <dd>Center for UFO Studies</dd>
+
+    <li><dt><a href="https://mufon.com">mufon - est. 1969</a></li>
+    <dd>Mutual UFO Network</dd>
+
+    <li><dt><a href="http://www.nuforc.org">The National UFO Reporting Center - USA</a></li>
+    <dd>Dedicated to the Collection and Dissemination of Objective UFO Data</dd>
+
+    <li><dt><a href="https://www.bufora.org.uk">b.u.r.a.</a></li>
+    <dd>British UFO Research Association</dd>
+
+    <li><dt><a href="https://ufostalker.com">ufo.maps</a></li>
+    <dd>Live UFO Map</dd>
+
+    </menu>
+    <br>
+    <hr>
+    <hr>
+    <center>
+        <img src="images/alien-emoji.png" alt="" style="width:16;height:16;">  2021-2022 SIO Team 24
+    </center>
+</body>
+</html>
+
+<!--<img src="https://cdn.britannica.com/86/34386-050-25B31B35/Great-horned-owl.jpg">This is my 1st post</img>-->
+<!--https://pbs.twimg.com/profile_images/616610544527745024/Rx3uy37a_400x400.jpg-->

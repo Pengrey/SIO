@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+	</head>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+    </style> 
+	<body text=#dfe7e7 link=##36cc00 vlink=#349111 style="background-image: url('https://images.unsplash.com/photo-1620646233562-f2a31ad24425?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3RhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');">
+		<div >
+			<div>
+				<h3 style="font-family: 'Orbitron', sans-serif; text-align: center;
+				font-size: 42px;
+	font-family: Arial Black, Gadget, sans-serif;
+	background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+	-webkit-animation: animatedBackground_a 5s linear infinite alternate;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000;
+	background-clip: text;
+	"> You are almost a part of our UFOs community, hope you have a great time navigating into the world of aliens</h3>
+			</div>
+
+			<h1 style="text-align: center; font-family: 'Orbitron', sans-serif; color: cornflowerblue;">Register</h1>
+
+			<form action="{{ url_for('register') }}" method="post" autocomplete="off" style="text-align: center;">
+				<label style="padding-right: 1%;" for="username">
+					<i ></i>
+				</label>
+				<input style="padding-left: 1%;" type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i ></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label  for="email">
+					<i></i>
+				</label>
+				<div>
+					<input type="submit" value="Register" style="margin-top: 1%;">
+				</div>
+			</form>
+
+			<div style="text-align: center; padding-top: 1%;">
+				<a href="{{ url_for('login') }}" style=" font-family: 'Orbitron', sans-serif;">Login</a>
+			</div>
+
+		</div>
+	</body>
+</html>

