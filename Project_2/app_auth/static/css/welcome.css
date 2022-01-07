@@ -1,0 +1,182 @@
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+#img {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }
+
+  body {
+    background-size: cover;
+    font-family:"Ubuntu", sans-serif;
+    background:#000;
+    /* height: 100vh; */
+    
+    cursor: none;
+}
+
+.spotlight {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    background-image: radial-gradient(
+        circle,
+        transparent 150px,
+        rgba(0, 0, 0, 0.85) 200px
+    );
+}
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
+
+
+  .block-wrap{
+    background-size:100% 100%;
+    width:100%;
+    overflow:hidden;
+  }
+  .imgcontainer{
+    background-size:100% 100%;
+    width:100%;
+    overflow:hidden;
+  }
+  .block{
+    display:inline-block;
+    float:left;
+    color:#fff;
+    width:12%;
+    padding:2%;
+    line-height:0;
+    background:#151515;
+    -webkit-transition:all 0.2s ease-in;
+    -webkit-transition-delay:0.4s;
+    -moz-transition:all 0.2s ease-in;
+    -moz-transition-delay:0.4s;
+    transition:all 0.2s ease-in;
+    transition-delay:0.4s;
+    text-align:center;
+  }
+  .imgchar{
+    opacity: 0.0;
+    z-index: 10;
+    transition: 0.5s;
+  }
+
+  .imgchar:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+
+  .quotes {
+    color: #FFF;
+    font-family:"Ubuntu", sans-serif;
+    font-style: italic;
+    font-size: small;
+    text-align: justify!important;
+    margin-top: 2%!important;
+    opacity: 0.8;
+  }
+
+  ::-webkit-scrollbar-track
+  {
+    
+    border-radius: 0px;
+    background-color: #555;
+    border-left: 3px solid #151515;
+    border-right: 3px solid #151515;
+  }
+  
+  ::-webkit-scrollbar
+  {
+    width: 7px;
+    background-color: #151515;
+  }
+  
+  ::-webkit-scrollbar-thumb
+  {
+    border-radius: 0px;
+    border-bottom: 10px solid #151515;
+    border-top: 10px solid #151515;
+    border-left: 1px solid #151515;
+    border-right: 1px solid #151515;
+    background-color: #555;
+  }
+
+/* 
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200%;
+  width: 100vw;
+}
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: transparent;
+}
+  .line::after {
+    content: '';
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: drop 10s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+    .line:nth-child(1){
+    margin-left: -25%;
+  }
+    .line:nth-child(1)::after {
+      animation-delay: 1s;
+    }
+    .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .line:nth-child(3)::after {
+      animation-delay: 2s;
+    }
+  
+    
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 100%;
+  }
+  } */

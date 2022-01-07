@@ -1,0 +1,44 @@
+@import url(//db.onlinewebfonts.com/c/29eae713336dae068ab1d3642db473a4?family=Big+Bang);
+#bazinga {
+    color: #fff;
+    text-align: center;
+    font-size: 1525%;
+    font-family: "Big Bang";
+}
+
+.modal-bg{
+	position:fixed;
+	left:0;right:0;
+	top:0;bottom:0;
+	background-color:rgba(50,50,50,0.5);
+}
+
+
+input:focus{
+  outline:0;
+}
+
+#modal{ 
+    display: none;
+	position:absolute;
+	background-color:#313131;
+	top:40%; 
+	left:38%;
+	z-index:100;
+	border-radius:0px;
+	width:25%;
+	height: auto;
+	border-bottom: 4px solid #d9534f;
+	border-top: 20px solid #d9534f;
+	box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+}
+.form-outline.mb-4 {
+	margin-bottom: 2%!important;
+}
+
+#invalid_cred {
+	color: #d9534f;
+	font-size: medium;
+}
+
+@font-face {font-family: "Big Bang"; src: url("//db.onlinewebfonts.com/t/29eae713336dae068ab1d3642db473a4.eot"); src: url("//db.onlinewebfonts.com/t/29eae713336dae068ab1d3642db473a4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/29eae713336dae068ab1d3642db473a4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/29eae713336dae068ab1d3642db473a4.woff") format("woff"), url("//db.onlinewebfonts.com/t/29eae713336dae068ab1d3642db473a4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/29eae713336dae068ab1d3642db473a4.svg#Big Bang") format("svg"); }
